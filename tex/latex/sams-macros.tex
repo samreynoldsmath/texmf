@@ -47,7 +47,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Special Letters and Symbols
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\ii}{\mathfrak{i}} 	% complex i
 \newcommand{\eps}{\varepsilon}	% curvy epsilon
 \newcommand{\phii}{\varphi} 	% curvy phi
 
@@ -74,20 +73,39 @@
 \DeclareAutoPairedDelimiter{\floor}{\lfloor}{\rfloor} 	% floor
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Sets
+% Special Sets
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\nada}{\varnothing} % empty set
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\F}{\mathbb{F}}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}		% complex plane
+\newcommand{\F}{\mathbb{F}}		% arbitrary field
+\newcommand{\N}{\mathbb{N}}		% natural numbers
+\renewcommand{\P}{\mathbb{P}}		% polynomials
+\newcommand{\Q}{\mathbb{Q}}		% rationals
+\newcommand{\R}{\mathbb{R}}		% reals
+\newcommand{\Z}{\mathbb{Z}}		% integers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Relations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% open subset symbol: \subset + \circ (Thank you, Jay!)
+\DeclareFontEncoding{LS1}{}{}
+\DeclareFontSubstitution{LS1}{stix}{m}{n}
+\DeclareSymbolFont{symbols2}      {LS1}{stixfrak} {m} {n}
+\DeclareMathSymbol{\subsetocirc}{\mathord}{symbols2}{"05}
+\newcommand{\subseto}{\mathop{\,\subsetocirc\,}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Algebra
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand\inv{^{-1}} % inverse
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Complex Analysis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ii}{\mathfrak{i}} 	% complex i
+\renewcommand\Re{\text{Re}\,}
+\renewcommand\Im{\text{Im}\,}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Matrices
@@ -113,5 +131,9 @@
 % Calculus
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\renewcommand\div{\operatorname{div}}
-\newcommand\curl{\operatorname{curl}}
+\renewcommand\div{\operatorname{div}}	% divergence
+\newcommand\curl{\operatorname{curl}}	% curl
+\newcommand\pdd[2]{\dfrac{\partial #1}{\partial #2}} % partial derivative
+\newcommand\pd[2]{\frac{\partial #1}{\partial #2}} % partial derivative
+\newcommand\nd[1]{\frac{\partial #1}{\partial\bf{n}}} % normal derivative
+\newcommand\td[1]{\frac{\partial #1}{\partial\bf{t}}} % tangential derivative
