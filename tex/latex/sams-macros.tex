@@ -88,6 +88,7 @@
 \newcommand{\nada}{\varnothing} % empty set
 \newcommand{\C}{\mathbb{C}}		% complex plane
 \newcommand{\F}{\mathbb{F}}		% arbitrary field
+\newcommand{\K}{\mathbb{K}}		% arbitrary field
 \newcommand{\N}{\mathbb{N}}		% natural numbers
 \renewcommand{\P}{\mathbb{P}}		% polynomials
 \newcommand{\Q}{\mathbb{Q}}		% rationals
@@ -141,8 +142,10 @@
 % Calculus
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\renewcommand\div{\operatorname{div}}	% divergence
-\newcommand\curl{\operatorname{curl}}	% curl
+\renewcommand{\div}{\mathop{\text{div}}}
+% \DelcareMathOperator{\div}{div}	% divergence
+\DeclareMathOperator{\grad}{grad} % gradient
+\DeclareMathOperator{\curl}{curl}	% curl
 \newcommand\pdd[2]{\dfrac{\partial #1}{\partial #2}} % partial derivative
 \newcommand\pd[2]{\frac{\partial #1}{\partial #2}} % partial derivative
 \newcommand\nd[1]{\frac{\partial #1}{\partial\bf{n}}} % normal derivative
@@ -155,6 +158,7 @@
 \DeclareMathOperator*{\esssup}{ess\,sup}
 \DeclareMathOperator{\weakto}{\rightharpoonup}
 \DeclareMathOperator*{\embed}{\longhookrightarrow}
+\DeclareMathOperator{\dom}{dom}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Optimization
